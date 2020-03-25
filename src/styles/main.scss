@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-box { 
+   width: 100%;
+   height: 100%;
+   position: absolute;
+    background:linear-gradient(240deg, #230444, #90303d, #ed8240, #d2ebe9);
+    background-size:800% 800%;
+    -webkit-animation:AnimationName 47s ease infinite;
+    -moz-animation:AnimationName 47s ease infinite;
+    animation:AnimationName 47s ease infinite
+   }
+   @-webkit-keyframes AnimationName {
+    0% {
+     background-position:0% 82%
+    }
+    50% {
+     background-position:100% 19%
+    }
+    100% {
+     background-position:0% 82%
+    }
+   }
+   @-moz-keyframes AnimationName {
+    0% {
+     background-position:0% 82%
+    }
+    50% {
+     background-position:100% 19%
+    }
+    100% {
+     background-position:0% 82%
+    }
+   }
+   @keyframes AnimationName {
+    0% {
+     background-position:0% 82%
+    }
+    50% {
+     background-position:100% 19%
+    }
+    100% {
+     background-position:0% 82%
+    }
+   }
+
+.cover{
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 2;
+  .left-side{
+      width: 49%;
+      height: 100%;
+      float: left;
+     h1{
+         position: relative;
+        font-size: 96px;
+        font-family: 'Luckiest Guy', cursive;
+        color: #003366;
+        left: 25%;
+        top: 10%;
+     }
+     h3{
+        position: relative;
+        font-size: 46px;
+        font-family: 'Luckiest Guy', cursive;
+        color: #003366;
+        left: 40%;
+        top: 15%;
+     }
+  }
+  .cover-line{
+      width: 5px;
+      margin-top: 80px;
+      height: 80%;
+      float: left;
+      background-color: #FF6600;
+  }
+  .right-side{
+      width: 49%;
+      height: 100%;
+      float: left;
+  }
+}
+
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    background: white;
+}
+.box{
+    float: left;
+    border: 1px solid darkblue;
+    height: 131.3333px;
+    width: 131.3333px;
+    transition: border-radius 1s cubic-bezier(0,1.66,0,3.07);
+    position: relative;
+}
+// .box-onclick{
+//     border-radius: 50%;
+// }
+.img1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+.img2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;    
+}
