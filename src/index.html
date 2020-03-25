@@ -10,7 +10,7 @@
 <body>
     <div class="main-box"></div>
     <div class="cover">
-        <div class="left-side">
+        <div class="left-side" id="left-side">
             <h1>TIC TAC TOE</h1>
             <h3>GAME MODE</h3>
             <div class="mode-images">
@@ -27,8 +27,8 @@
                     <i class="far fa-circle"></i>
                     </div>
                     <div class="name-player1">
-                    <label>PLAYER NAME</label>
-                    <input type="text" >
+                    <label id="label-1player">PLAYER NAME</label>
+                    <input type="text" id="name-input-1player">
                     </div>
                 </div>
                 <div class="2player">
@@ -87,22 +87,40 @@
            <div class="player-shape3">
             <h3>AI SHAPES</h3>
             <div class="slideshow-shapes2">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div class="next-shape2">
+                <div>
+                    <i class="fas fa-times shapes" id="shape11"></i>
+                </div>
+                <div>
+                    <i class="fas fa-star shapes" id="shape22"></i> 
+                </div>
+                <div>
+                    <i class="fas fa-square shapes" id="shape33"></i>
+                </div>
+                <div>
+                    <i class="far fa-circle shapes" id="shape44"></i>
+                </div>
+                <div>
+                    <i class="fas fa-heart shapes" id="shape55"></i>
+                </div>
+                <div class="next-shape2" id="next-shape2">
                     <i class="fas fa-greater-than"></i>
                  </div>
-                 <div class="previous-shape2">
+                 <div class="previous-shape2" id="previous-shape2">
                     <i class="fas fa-less-than"></i>
                  </div>
             </div>
        </div>
         </div>
         <div class="side-bar">
-
+           <div class="home">
+            <i class="fas fa-home"></i>
+           </div>
+           <div class="pause">
+            <i class="fas fa-pause-circle"></i>
+           </div>
+           <div class="sound">
+            <i class="fas fa-volume-up"></i>
+           </div>
         </div>
    </div>
     </div>

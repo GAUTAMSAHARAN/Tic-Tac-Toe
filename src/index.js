@@ -236,8 +236,8 @@ nextShape.addEventListener("click",()=>{
         shapeArray[shapeNumber-1].style.display = "none";
         shapeArray[shapeNumber].style.display = "inline";
     }else{
-        shapeNumber = shapeNumber - 4;
-        shapeArray[shapeNumber].style.display = "none";
+        shapeNumber = shapeNumber - 5;
+        shapeArray[shapeNumber+4].style.display = "none";
         shapeArray[shapeNumber].style.display = "inline";
     }
 
@@ -245,11 +245,52 @@ nextShape.addEventListener("click",()=>{
 previousShape.addEventListener("click",()=>{
     shapeNumber--;
     if(shapeNumber<5 && shapeNumber>=0){
-        shapeArray[shapeNumber].style.display = "none";
+        shapeArray[shapeNumber+1].style.display = "none";
         shapeArray[shapeNumber].style.display = "block";
     }else{
-        shapeNumber = shapeNumber + 4;
-        shapeArray[shapeNumber].style.display = "none";
+        shapeNumber = shapeNumber + 5;
+        shapeArray[shapeNumber-4].style.display = "none";
         shapeArray[shapeNumber].style.display = "block";
     }
+})
+
+let nextShape2 = document.getElementById('next-shape2');
+let previousShape2 = document.getElementById('previous-shape2');
+let Shape11 = document.getElementById('shape11');
+let Shape22 = document.getElementById('shape22');
+let Shape33 = document.getElementById('shape33');
+let Shape44 = document.getElementById('shape44');
+let Shape55 = document.getElementById('shape55');
+let shapeArray2 = [Shape11,Shape22,Shape33,Shape44,Shape55];
+let shapeNumber2 = 0;
+nextShape2.addEventListener("click",()=>{
+    shapeNumber2++;
+    if(shapeNumber2<5 && shapeNumber2>=0){
+        shapeArray2[shapeNumber2-1].style.display = "none";
+        shapeArray2[shapeNumber2].style.display = "inline";
+        console.log(shapeNumber2);
+    }else{
+        shapeNumber2 = shapeNumber2 - 5;
+        shapeArray2[shapeNumber2+4].style.display = "none";
+        shapeArray2[shapeNumber2].style.display = "inline";
+    }
+
+})
+previousShape2.addEventListener("click",()=>{
+    shapeNumber2--;
+    if(shapeNumber2<5 && shapeNumber2>=0){
+        shapeArray2[shapeNumber2+1].style.display = "none";
+        shapeArray2[shapeNumber2].style.display = "block";
+    }else{
+        shapeNumber2= shapeNumber2 + 5;
+        shapeArray2[shapeNumber2-4].style.display = "none";
+        shapeArray2[shapeNumber2].style.display = "block";
+    }
+})
+
+//cool onclick effect on input place -----------------------------------
+let input1 = document.getElementById('name-input-1player');
+let label1 = document.getElementById('label-1player');
+input1.addEventListener("click", ()=>{
+    label1.classList.toggle('labelchange');
 })
