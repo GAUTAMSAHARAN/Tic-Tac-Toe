@@ -72,6 +72,108 @@
         left: 40%;
         top: 15%;
      }
+     .mode-images{
+         position: relative;
+         top: 20%;
+         left: 47%;
+         width: 150px;
+         height: 80px;
+         .single-user{
+             height: 100%;
+             width: 48%;
+             float: left;
+             font-size: 40px;   
+             text-align: center;
+             padding-top: 20px;
+             color: white;
+             background-image: linear-gradient(to left, rgb(0,51,102), rgba(0,51,102,0.6));
+             transform: scale(1.1);
+             cursor: pointer;
+             //0,51,102
+             //255,102,0
+            }
+         .double-user{
+             height: 100%;
+             width: 48%;
+             float: left;
+             font-size: 40px;
+             text-align: center;
+             padding-top: 20px;
+             background-color: rgba(0,51,102,0.4);
+             cursor: pointer;
+         }
+     }
+     .player-info{
+         position: relative;
+         top: 30%;
+         left: 23%;
+         width: 400px;
+         height: 60px;
+         .player1{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 30%;
+            left: 30%;
+            .shape-player1{
+                position: relative;
+                width: 10%;
+                height: 100%;
+                float: left;
+                font-size: 40px;
+                text-align: center;
+                padding-top: 4px;
+            }
+            .name-player1{
+                position: relative;
+                margin-left: 15px;
+                width: 80%;
+                height: 100%;
+                float: left;
+                label{
+                    font-family: 'Luckiest Guy', cursive;
+                    color: grey;
+                    position: absolute;
+                    top: 20px;
+                }
+                input{
+                    height: 50px;
+                    text-decoration: none;
+                    border: none;
+                    border-bottom: 1px solid black;
+                }
+            }
+         }
+     }
+     .game-start{
+         position: relative;
+         top: 50%;
+         width: 150px;
+         height: 50px;
+         left: 46%;
+         padding: 10px;
+         justify-content: center;
+         background-image: linear-gradient(to left, rgb(255,102,0), rgba(255,102,0,0.6));
+         h2{  position: relative;
+             float: left;
+             color: white;
+             font-family: 'Luckiest Guy', cursive;
+             margin-left: 35px;
+             margin-top: 15px;
+         }
+         .icon-start{
+             position: relative;
+             color: white;
+             font-size: 25px;
+             float: left;
+             margin-top: 10px;
+             margin-left: 3px;
+         }
+         &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+     }
   }
   .cover-line{
       width: 5px;
@@ -84,7 +186,224 @@
       width: 49%;
       height: 100%;
       float: left;
-  }
+      h2{
+       position: relative;
+       color: #FF6600;
+       font-size: 50px;
+       font-family: 'Luckiest Guy', cursive;
+       left: 6%;
+       top: 13%;
+      } 
+      .player-shape{
+          position: relative;
+          width: 60%;
+          height: 150px;
+          top: 20%;
+          left: 30px;
+          h3{
+             width: 20%;
+             height: 60%; 
+             float: left;
+            font-size: 35px;
+            font-family: 'Luckiest Guy', cursive;  
+            color: #005082;
+            margin-left: 25px;
+            position: relative;
+            text-align: center;
+            margin-top: 60px;
+
+         }
+          .slideshow-faces{
+              margin-left: 30px;
+              position: relative;
+              width: 50%;
+              height: 100%;
+              float: left;
+              .img{
+                  position: absolute;
+                  left: 10%;
+                  width: 80%;
+                  height: 100%;
+                  img{
+                      width: 100%;
+                      height: 100%;
+                  }
+              }
+              .next-face{
+                  width: 37px;
+                  margin-top: 50px;
+                  background-color: white;
+                  height: 50px;
+                  position: absolute;
+                  left: 85.2%;
+                  color: #000839;
+                  font-size: 30px;
+                  cursor: pointer;
+                  border: 1px solid black;
+                  .fa-greater-than{
+                      margin-top: 10px;
+                      margin-left: 5px;
+                  }
+              }
+              .previous-face{
+                width: 37px;
+                margin-top: 50px;
+                background-color: white;
+                border: 1px solid black;
+                height: 50px;
+                position: absolute;
+                left: 0;
+                color: #000839;
+                font-size: 30px;
+                cursor: pointer;
+                .fa-less-than{
+                    margin-top: 10px;
+                    margin-left: 5px;
+                }
+              }
+          }
+      }
+      .player-shape2{
+        position: relative;
+        width: 60%;
+        height: 150px;
+        top: 25%;
+        left: 30px;
+        h3{
+           width: 20%;
+           height: 60%; 
+           float: left;
+          font-size: 35px;
+          font-family: 'Luckiest Guy', cursive;  
+          color: #005082;
+          margin-left: 25px;
+          position: relative;
+          text-align: center;
+          margin-top: 60px;
+
+       }
+        .slideshow-shapes{
+            margin-left: 30px;
+            position: relative;
+            width: 50%;
+            height: 100%;
+            float: left;
+            cursor: pointer;
+            .next-shape{
+                width: 37px;
+                margin-top: 50px;
+                background-color: white;
+                height: 50px;
+                position: absolute;
+                left: 85.2%;
+                color: #000839;
+                border: 1px solid black;
+                font-size: 30px;
+                .fa-greater-than{
+                    margin-top: 10px;
+                    margin-left: 5px;
+                }
+            }
+            .previous-shape{
+              width: 37px;
+              margin-top: 50px;
+              background-color: white;
+              height: 50px;
+              position: absolute;
+              left: 0;
+              color: #000839;
+              border: 1px solid black;
+              font-size: 30px;
+              cursor: pointer;
+              .fa-less-than{
+                  margin-top: 10px;
+                  margin-left: 5px;
+              }
+            }
+        }
+        .shapes{
+            display: none;
+            position: absolute;
+            top: 33px;
+            left: 95px;
+            color: #00a8cc;
+            font-size: 90px; 
+        }
+        .fa-times{
+            left: 110px;
+        }
+        .fa-circle{
+            display: block;
+        }
+    }
+    .player-shape3{
+        position: relative;
+        width: 60%;
+        height: 150px;
+        top: 30%;
+        left: 30px;
+        h3{
+           width: 20%;
+           height: 60%; 
+           float: left;
+          font-size: 35px;
+          font-family: 'Luckiest Guy', cursive;  
+          color: #005082;
+          margin-left: 25px;
+          position: relative;
+          text-align: center;
+          margin-top: 60px;
+
+       }
+        .slideshow-shapes2{
+            margin-left: 30px;
+            position: relative;
+            width: 50%;
+            height: 100%;
+            float: left;
+            .next-shape2{
+                width: 37px;
+                margin-top: 50px;
+                background-color: white;
+                height: 50px;
+                position: absolute;
+                left: 85.2%;
+                color: #000839;
+                border: 1px solid black;
+                font-size: 30px;
+                cursor: pointer;
+                .fa-greater-than{
+                    margin-top: 10px;
+                    margin-left: 5px;
+                }
+            }
+            .previous-shape2{
+              width: 37px;
+              margin-top: 50px;
+              background-color: white;
+              height: 50px;
+              position: absolute;
+              left: 0;
+              border: 1px solid black;
+              color: #000839;
+              font-size: 30px;
+              cursor: pointer;
+              .fa-less-than{
+                  margin-top: 10px;
+                  margin-left: 5px;
+              }
+            }
+        }
+    }
+   }
+   .side-bar{
+       position: relative;
+       width: 130px;
+       height: 100%;
+       top: 0;
+       left: 94%;
+       background-color: #00a8cc;
+   }
 }
 
 .container{

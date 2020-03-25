@@ -1,6 +1,16 @@
 import './styles/main.scss';
 import circle from "./images/circle.png";
 import cross from "./images/cross.jpeg";
+import Face2 from "./images/2face.jpg";
+import Face3 from "./images/3face.jpg";
+import Face4 from "./images/4face.jpg";
+import Face5 from "./images/5face.jpg";
+import Face6 from "./images/6face.jpg";
+import Face7 from "./images/7face.jpg";
+import Face8 from "./images/8face.jpg";
+import Face9 from "./images/9face.jpg";
+import Face10 from "./images/10face.jpg";
+import Face11 from "./images/11face.jpg";
 
 //minimax-algorithm for tic-tac-toe---------------------------------------------
 
@@ -184,3 +194,62 @@ function personGame(board){
 personGame(board);
 
 
+let images = [Face2,Face2,Face3,Face4,Face5,Face6,Face7,Face8,Face9,Face10,Face11];
+//customization js------------------------------------------------
+let faceNumber  = 0;
+let face = document.getElementById('face-img');
+let next = document.getElementById('next-face');
+let previous = document.getElementById('previous-face')
+next.addEventListener("click",()=>{
+    faceNumber++;
+     if(faceNumber <= 9 && faceNumber>=0){
+        face.src = images[faceNumber];
+     }else{
+         faceNumber = faceNumber - 10;
+         face.src = images[faceNumber];
+     }
+}) 
+previous.addEventListener('click',()=>{
+    faceNumber--;
+     if(faceNumber <=9 && faceNumber >=0){
+         face.src = images[faceNumber];
+     }else{
+         faceNumber = faceNumber + 10;
+         face.src = images[faceNumber]; 
+    }
+})
+//------------------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//shapes customization js--------------------------------------------
+let nextShape = document.getElementById('next-shape');
+let previousShape = document.getElementById('previous-shape');
+let Shape1 = document.getElementById('shape1');
+let Shape2 = document.getElementById('shape2');
+let Shape3 = document.getElementById('shape3');
+let Shape4 = document.getElementById('shape4');
+let Shape5 = document.getElementById('shape5');
+let shapeArray = [Shape1,Shape2,Shape3,Shape4,Shape5];
+let shapeNumber = 0;
+nextShape.addEventListener("click",()=>{
+    shapeNumber++;
+    if(shapeNumber<5 && shapeNumber>=0){
+        shapeArray[shapeNumber-1].style.display = "none";
+        shapeArray[shapeNumber].style.display = "inline";
+    }else{
+        shapeNumber = shapeNumber - 4;
+        shapeArray[shapeNumber].style.display = "none";
+        shapeArray[shapeNumber].style.display = "inline";
+    }
+
+})
+previousShape.addEventListener("click",()=>{
+    shapeNumber--;
+    if(shapeNumber<5 && shapeNumber>=0){
+        shapeArray[shapeNumber].style.display = "none";
+        shapeArray[shapeNumber].style.display = "block";
+    }else{
+        shapeNumber = shapeNumber + 4;
+        shapeArray[shapeNumber].style.display = "none";
+        shapeArray[shapeNumber].style.display = "block";
+    }
+})
