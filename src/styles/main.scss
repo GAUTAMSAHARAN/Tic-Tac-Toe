@@ -2,51 +2,54 @@
     margin: 0;
     padding: 0;
 }
+body{
+    overflow: hidden;
+}
 .main-box { 
    width: 100%;
    height: 100%;
    position: absolute;
-    background:linear-gradient(240deg, #230444, #90303d, #ed8240, #d2ebe9);
-    background-size:800% 800%;
-    -webkit-animation:AnimationName 47s ease infinite;
-    -moz-animation:AnimationName 47s ease infinite;
-    animation:AnimationName 47s ease infinite
+   overflow: hidden;
+   .navbar-game{
+       background-color: white;
+       height: 100px;
+       width: 800px;
+       left: 50%;
+       margin-left: -400px;
+       position: relative;
+       top: 0;
+       transform: translateY(-500px);
+       transition: transform 1.2s ease-in-out;
+       .logo{
+           width: 150px;
+           height: 150px;
+           position: absolute;
+           left: 50%;
+           margin-left: -75px;
+           transform: translateY(-500px);
+           transition: transform 1.5 ease-in-out;
+         .logo-img{
+             width: 100%;
+             height: 100%;
+         }
+       }
+       .player1-score{
+           width: 50%;
+           float: left;
+           height: 100%;
+           background: yellow;
+       }
+       .player2-score{
+           width: 50%;
+           height: 100%;
+           float: left;
+           background: black;
+       }
    }
-   @-webkit-keyframes AnimationName {
-    0% {
-     background-position:0% 82%
-    }
-    50% {
-     background-position:100% 19%
-    }
-    100% {
-     background-position:0% 82%
-    }
-   }
-   @-moz-keyframes AnimationName {
-    0% {
-     background-position:0% 82%
-    }
-    50% {
-     background-position:100% 19%
-    }
-    100% {
-     background-position:0% 82%
-    }
-   }
-   @keyframes AnimationName {
-    0% {
-     background-position:0% 82%
-    }
-    50% {
-     background-position:100% 19%
-    }
-    100% {
-     background-position:0% 82%
-    }
-   }
+}
 
 .cover{
+    display: block;
     position: absolute;
   width: 100%;
   height: 100%;
@@ -154,6 +157,7 @@
          }
      }
      .game-start{
+         cursor: pointer;
          position: relative;
          top: 50%;
          width: 150px;
@@ -487,22 +491,76 @@
 }
 
 .container{
+    overflow: hidden;
     position: fixed;
+    display: none;
     top: 50%;
     left: 50%;
-    width: 400px;
-    height: 400px;
-    margin-left: -200px;
-    margin-top: -200px;
-    background: white;
+    width: 600px;
+    height: 600px;
+    margin-left: -290px;
+    margin-top: -280px;
+    background: grey;
+    .game-board{
+    display: block
+    }
+    .result{
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        .game{
+            width: 100%;
+            height: 50%;
+            background: black;
+            color: white;
+            font-size: 30px;
+            font-family: 'Luckiest Guy', cursive;
+            text-align: center;
+            transform: translateY(-500px);
+            transition: transform 2s ease-in-out;
+            #upper-heading{
+                position: relative;
+                color: white;
+                font-size: 30px;
+                font-family: 'Luckiest Guy', cursive;
+            }
+        }
+        .result-end{
+            width: 100%;
+            height: 50%;
+            background: yellow;
+            transform: translateY(500px);
+            transition: transform 2s ease-in-out;
+            #lower-heading{
+                position: relative;
+                vertical-align: middle;
+                color: white;
+                font-size: 30px;
+                font-family: 'Luckiest Guy', cursive;
+            }
+        }
+    }
 }
 .box{
     float: left;
-    border: 1px solid darkblue;
-    height: 131.3333px;
-    width: 131.3333px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 1px solid white;
+    height: 160px;
+    width: 160px;
     transition: border-radius 1s cubic-bezier(0,1.66,0,3.07);
     position: relative;
+    font-size: 120px;
+    text-align: center;
+    color: white;
+    .fas{
+   vertical-align: middle;
+    }
+    .far{
+    vertical-align: middle;
+    }
 }
 // .box-onclick{
 //     border-radius: 50%;
@@ -518,4 +576,118 @@
     height: 100%;
     position: absolute;
     display: none;    
+}
+
+
+//game-start css----------------------------------------------------
+    .player-first{
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: black;
+        top: 250px;
+        left: 50%;
+        margin-left: -750px;
+        transform: translateY(-1000px);
+        transition: transform 2s cubic-bezier(.42,0,0,1.3);
+        .player-first-img{
+            position: relative;
+            width: 220px;
+            height: 200px;
+            left: 50%;
+            top: 24%;
+            margin-left: -110px;
+            background-color: white;
+        }
+        .player-first-name{
+            position: relative;
+            width: 220px;
+            height: 50px;
+            background-color: white;
+            top: 29%;
+            left: 50%;
+            margin-left: -110px;
+            color: black;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 15px;
+            h1{
+              font-family: 'Luckiest Guy', cursive;
+            }
+        }
+    }
+    .versus{
+        position: absolute;
+        width: 500px;
+        float: left;
+        height: 500px;
+        left: 50%;
+        margin-left: -250px;
+        top: 250px;
+        background-color: grey;
+        transform:  translateY(1000px);
+        transition: transform 2s cubic-bezier(.42,0,0,1.3);
+        .versus-img{
+            position: relative;
+            top: 40px;
+            left: 40px;
+        }
+    }
+    .player-second{
+        position: absolute;
+        width: 500px;
+        float: left;
+        height: 500px;
+        left: 50%;
+        margin-left: 250px;
+        top: 250px;
+        transform: translateY(-1000px);
+        transition: transform 2s cubic-bezier(.42,0,0,1.3);
+        background-color: yellow;
+        .second-first-img{
+            position: relative;
+            width: 220px;
+            height: 200px;
+            left: 50%;
+            top: 24%;
+            margin-left: -110px;
+            background-color: white;
+        }
+        .second-first-name{
+            position: relative;
+            width: 220px;
+            height: 50px;
+            background-color: white;
+            top: 29%;
+            left: 50%;
+            margin-left: -110px;
+        }
+    }
+//css class for after game-start animation-----------------
+.after-start-first{
+    transition: margin 1.5s ease-in-out;
+    margin-left: -900px;
+}
+.after-start-second{
+    transition: margin 1.5s ease-in-out;
+   margin-left: 400px;
+}
+.after-start-versus{
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.player-img{
+    width: 100%;
+    height: 100%;
+}
+
+.second-first-name{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 15px;
+    h1{
+      font-family: 'Luckiest Guy', cursive;
+    }
 }

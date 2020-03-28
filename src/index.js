@@ -11,6 +11,10 @@ import Face8 from "./images/8face.jpg";
 import Face9 from "./images/9face.jpg";
 import Face10 from "./images/10face.jpg";
 import Face11 from "./images/11face.jpg";
+import ring1 from "./images/ring1.png"; 
+import ring11 from "./images/ring11.png";
+import ring12 from "./images/ring12.png";
+import AIbot from "./images/AIbot.jpg";
 
 //minimax-algorithm for tic-tac-toe---------------------------------------------
 
@@ -152,14 +156,34 @@ function findBestMove(numbers){
    }
    return bestMove;
 }
+//elements to show results------------------------------------------
+let upperHalf = document.getElementById('upper-heading');
+let lowerHalf = document.getElementById('lower-heading');
+let upperHalfBox = document.getElementById('game');
+let lowerHalfBox = document.getElementById('result-end'); 
+let resultBox = document.getElementById('result-game');
+//------------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 async function check(board){
     let result = evaluate(board);
     if(result==10){
-       alert("you win");
+     upperHalf.innerHTML = "YOU";
+     lowerHalf.innerHTML = "Win";
+     resultBox.style.display = "inline";
+     upperHalfBox.style.transform = "translateY(0)";
+     lowerHalfBox.style.transform = "translateY(0)";
     }else if(result == -10){
-       alert("computer win");
+       upperHalf.innerHTML = "YOU";
+       lowerHalf.innerHTML = "LOSE";
+       resultBox.style.display = "inline";
+       upperHalfBox.style.transform = "translateY(0)";
+       lowerHalfBox.style.transform = "translateY(0)";
     }else if(result==0){
+       upperHalf.innerHTML = "GAME";
+       lowerHalf.innerHTML = "TIE";
+       resultBox.style.display = "inline";
+       upperHalfBox.style.transform = "translateY(0)";
+       lowerHalfBox.style.transform = "translateY(0)";
        alert("game tie");
     }
 }
@@ -167,8 +191,9 @@ async function check(board){
 //game js-------------------------------------------------------
 function computerGame(board){
     let move = findBestMove(board);
-    let img  = document.getElementById(`img2-${move}`);
-    img.style.display = "block";
+    let box  = document.getElementById(`box-${move}`);
+    let clone = shapeArray2[shapeNumber2].cloneNode(true);
+    box.appendChild(clone);
     board[move] = 1;    
     console.log(move); 
 }
@@ -179,10 +204,14 @@ function personGame(board){
         box.addEventListener("click",()=>{
             if(board[i] == 2){
              board[i] = 0;
-            let img = document.getElementById(`img1-${i}`);
-            img.style.display = "block";
+             let clone = shapeArray[shapeNumber].cloneNode(true);
+            box.appendChild(clone);
             }else{
-                alert("this step is not valid");
+                upperHalf.innerHTML = "THIS STEP IS";
+                lowerHalf.innerHTML = "NOT VALID";
+                resultBox.style.display = "block";
+                upperHalfBox.style.transform = "translateY(0)";
+                lowerHalfBox.style.transform = "translateY(0)";
             }
             check(board);
             computerGame(board);
@@ -293,4 +322,58 @@ let input1 = document.getElementById('name-input-1player');
 let label1 = document.getElementById('label-1player');
 input1.addEventListener("click", ()=>{
     label1.classList.toggle('labelchange');
+})
+
+
+//start-game js---------------------------------------------
+let start = document.getElementById('start-gameplay');
+start.addEventListener("click",()=>{
+    let cover = document.getElementById('cover');
+    cover.style.display = "none";
+//three-box for showing info v/s----------------------------
+let player_first_info = document.getElementById('player-first');
+let versus = document.getElementById('versus');
+let player_second_info = document.getElementById('player-second');
+//player info --------------------------------------------------------------
+let firstImg = document.getElementById('first-img');
+let secondImg = document.getElementById('second-img');
+firstImg.src= images[faceNumber];
+secondImg.src= AIbot;
+//---------------------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//setting the background image-----------------------------------
+let box = document.getElementById('main-box');
+box.style.background = `url(${ring1})`;
+box.style.backgroundSize = "100%";
+box.addEventListener("click",()=>{
+    player_first_info.style.transform = "translateY(0)";
+    versus.style.transform = "translateY(0)";
+    player_second_info.style.transform = "translateY(0)";
+    setTimeout(()=>{
+        player_first_info.classList.add('after-start-first');
+        versus.classList.add('after-start-versus');
+        player_second_info.classList.add('after-start-second');
+    },5000);
+    setTimeout(()=>{
+        let gameBoardTic = document.getElementById('container');
+        let navbar_game = document.getElementById('navbar-game');
+        let logo = document.getElementById('logo');
+        let img00 = document.getElementById('versus');
+        img00.style.display = "none";
+        gameBoardTic.style.display = "block";
+        navbar_game.style.transform = "translateY(0)";
+        logo.style.transform = "translateY(0)";
+    },6000);
+    setTimeout(()=>{
+        let game = document.getElementById('game');
+        let result_end = document.getElementById('result-end');
+        game.style.transform = "translateY(0)";
+        result_end.style.transform = "translateY(0)";
+    },8000)
+  })
+
+  //name of the player-------------------------------------
+  let name  = document.getElementById('name-input-1player');
+  let h1 = document.getElementById("name-first-player");
+  h1.textContent = name.value;
 })
