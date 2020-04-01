@@ -10,11 +10,25 @@
 <body>
     <div class="main-box" id="main-box">
         <div class="navbar-game" id="navbar-game">
-            <div class="player1-score"></div>
+            <div class="player1-score">
+              <div class="playerName">
+                  <span id="playerName1"></span>
+              </div>
+              <div class="playerScoreDiv">
+                  <span id="playerScoreDiv1"></span>
+              </div>
+            </div>
             <div class="logo" id="logo">
                 <img src="./images/logo.jpg" class="logo-img">
             </div>
-            <div class="player2-score"></div>
+            <div class="player2-score">
+                <div class="playerName">
+                    <span id="playerName2"></span>
+                </div>
+                <div class="playerScoreDiv">
+                    <span id="playerScoreDiv2"></span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="cover" id="cover">
@@ -124,7 +138,7 @@
             <i class="fas fa-home"></i>
            </div>
            <div class="pause">
-            <i class="fas fa-pause-circle"></i>
+            <i class="fa fa-repeat " aria-hidden="true"></i>
            </div>
            <div class="sound">
             <i class="fas fa-volume-up"></i>
@@ -138,6 +152,7 @@
             <div></div>
         </div>
         <div class="player-first" id="player-first">
+            <img src="#" class="crown-img" id="crown">
             <div class="player-first-img">
                 <img src="#" class="player-img-first player-img" id="first-img">
             </div>
@@ -149,6 +164,7 @@
             <img src="./images/versus.png" width="80%" height="80%" class="versus-img" id="versus">
         </div>
         <div class="player-second" id="player-second">
+            <img src="#" class="crown-img" id="crown2">
             <div class="second-first-img">
                 <img src="#" class="player-img-second player-img" id="second-img">
             </div>
@@ -179,12 +195,25 @@
       </div>
       <div class="result" id="result-game">
         <div class="game" id="game">
-           <h1 id="upper-heading"></h1>
+            <div class="blur"></div>
+           <span id="upper-heading"></span>
         </div>
         <div class="result-end" id="result-end">
-            <h1 id="lower-heading"></h1>
+            <div class="blur"></div>
+            <span id="lower-heading"></span>
         </div>
       </div>
     </div>
+    <div class="lower-bar" id="lower-bar">
+        <div class="home-low">
+         <i class="fas fa-home lower" id="home"></i>
+        </div>
+        <div class="pause-low">
+            <i class="fa fa-repeat lower" aria-hidden="true" id="newGame"></i>
+        </div>
+        <div class="sound-low">
+         <i class="fas fa-volume-up lower"></i>
+        </div>
+     </div>
 </body>
 </html>
