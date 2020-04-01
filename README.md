@@ -6,14 +6,9 @@ This is a complete and awesome <strong>Tic Tac Toe game</strong>, which is one s
 
 Table of contents ->
 
-   1. <strong>Demo</strong>
-   2. <strong>Technologies</strong>
-   3. <strong>Features</strong>
-   4. <strong>Development</strong>
-
-<h3>Demo -></h3>
-
-Here is the working live demo: .
+   1. <strong>Technologies</strong>
+   2. <strong>Features</strong>
+   3. <strong>Development</strong>
 
 <h3>Technologies -></h3>
 
